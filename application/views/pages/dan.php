@@ -1,11 +1,11 @@
+
 <?$this->load->helper('url');?>
-<html>
-<head>
-   <title>crap</title>
-   
-</head>
-<body>
+ <link rel="stylesheet" type="text/css" href="<?=base_url("css/style2.css")?>">
+<div id = "content">
    <h1>CodeIgniter 2 Tutorial</h1>
 <p>
+
 <img src="<?=base_url("images/DodgyDan.jpg")?>">
 </p>  
+</div>
+

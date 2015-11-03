@@ -1,3 +1,5 @@
- <em>&copy; this is the template footer 2015</em>
+<div id ="footer">
+<p>&copy; A.Gilson 2015</p>
+</div>
         </body>
 </html>

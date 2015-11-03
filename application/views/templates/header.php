@@ -1,7 +1,12 @@
+<!DOCTYPE html>
 <html>
-        <head>
-                <title>CodeIgniter Tutorial: this is the template header</title>
-        </head>
+     <head>
+       <title>CodeIgniter Tutorial: this is the template header</title>
+      
+    </head>
         <body>
-
-                <h1><?php echo $title.": this is the template header"; ?></h1>
+        <div id = "header">
+                <h1><?php echo $title.": HEADER here"; ?></h1>
+        </div>
+        <div id= "navBar">
+        </div>
