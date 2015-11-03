@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#container{
+ height:auto;
+ width: 100%;
+}
+#header{   
+   background-color: #ff70fa;
+   height: 120px;
+   width: 100%;
+}
+
+#navBar{
+   height: 50px;
+   width: 100%; 
+   background-color: #99ff55;
+
+}
+
+#content{
+  height: auto;
+  width: 100%;
+  background-color: #ffde3e;
+}
+
+#footer{
+    height: 40px;
+	width: 100%;
+	background-color: #3228cc;
+}
