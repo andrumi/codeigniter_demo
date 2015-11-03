@@ -9,7 +9,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Untitled Document</title>
-<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<!--<?//=base_url("images/DodgyDan.jpg")?>-->
+<!--<link href="boilerplate.css" rel="stylesheet" type="text/css">-->
+
+<link href="../../../css/boilerplate.css" rel="stylesheet" type="text/css">
 <link href="../../../css/fluidStyle.css" rel="stylesheet" type="text/css">
 <!-- 
 To learn more about the conditional comments around the html tags at the top of the file:
@@ -24,7 +27,7 @@ Do the following if you're using your customized build of modernizr (http://www.
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script src="respond.min.js"></script>
+<script src="../../../js/respond.min.js"></script>
 </head>
 <body>
 <div class="gridContainer clearfix">
