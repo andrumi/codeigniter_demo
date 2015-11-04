@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url("css/form.css")?>">
 </head>  -->
 <body>
- <link rel="stylesheet" type="text/css" href="<?=base_url("css/form.css")?>">
+<link rel="stylesheet" type="text/css" href="<?=base_url("css/form.css")?>">
 <form id=payment>
     <fieldset>
         <legend>Your details</legend>
