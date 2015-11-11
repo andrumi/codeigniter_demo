@@ -1,3 +1,8 @@
+ html {
+  position: relative;
+  min-height: 100%;
+}
+
 .container{ 
  
  background-color:#ff70fa;
@@ -25,9 +30,12 @@
   width: 100%;
   background-color: #ffde3e;
 }
-
-#footer{
-    height: 40px;
-	width: 100%;
-	background-color: #3228cc;
+ /* Sticky footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }
