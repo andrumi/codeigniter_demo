@@ -1,9 +1,12 @@
-@charset "utf-8";
-
-#container{
- height:auto;
- width: 100%;
+.container{ 
+ 
+ background-color:#ff70fa;
 }
+
+.jumbotron{
+ background-color:#99ff55;
+}
+
 #header{   
    background-color: #ff70fa;
    height: 120px;
