@@ -1,17 +1,43 @@
- html {
-  position: relative;
-  min-height: 100%;
+.body{
+   padding-top: 70px;
 }
-
-.container{ 
- 
- background-color:#ff70fa;
+.fixed-bg {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:100% auto;
 }
+.container-fluid{
+    background-image: url("../images/summer_flower.jpg");
+    bottom: 0;
+    min-height: 100%;
+    height:auto;
+    height: 100%;
+}
+/*.bgimage {*/
+    /*background-image: url("../images/summer_flower.jpg");*/
+    /*background-size: 100%;*/
+/*}*/
 
+/*.bgimage-inside {*/
+    /*padding-top: 37.36%; /!* this is actually (426/1140)*100 *!/*/
+/*}*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                  .bgimage-inside {
+                                                                                                                                                                                                                                                                                                                                                                                                                                      padding-top: 37.36%; /* this is actually (426/1140)*100 */
+                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+/*.fill-height {*/
+    /*min-height: 100%;*/
+    /*height:auto !important;*/
+    /*height: 100%;*/
+/*}*/
 .jumbotron{
- background-color:#99ff55;
+    background-color:#99ff55;
+    padding-top: 70px;
 }
-
+.navbar{
+    background-color: #28fff8;
+}
 #header{   
    background-color: #ff70fa;
    height: 120px;
@@ -29,13 +55,19 @@
   height: auto;
   width: 100%;
   background-color: #ffde3e;
+
 }
  /* Sticky footer */
-.footer {
+/*--.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
+  /* Set the fixed height of the footer here
   height: 60px;
   background-color: #f5f5f5;
+}*/
+img{
+    height: auto;
+    width:100%;
+
 }
