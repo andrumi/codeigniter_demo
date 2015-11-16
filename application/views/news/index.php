@@ -1,3 +1,4 @@
+<div class="container-fluid"
 <h2><?php echo $title; ?></h2>
 
 <?php foreach ($news as $news_item): ?>
@@ -9,3 +10,4 @@
         <p><a href="<?php echo site_url('news/view/'.$news_item['slug']); ?>">View article</a></p>
 
 <?php endforeach; ?>
+</div>
