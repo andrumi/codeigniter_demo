@@ -10,12 +10,32 @@ class News extends CI_Controller {
 
         public function index()
         {
+                $this->load->helper('form');
+                $this->load->library('form_validation');
                 $data['news'] = $this->news_model->get_news();
 				$data['title'] = 'News archive';
 
-                $this->load->view('templates/header', $data);
-                $this->load->view('news/index2', $data);
-                $this->load->view('templates/footer');
+//                $this->load->view('templates/header', $data);
+//                $this->load->view('news/index2', $data);
+//                $this->load->view('templates/footer');
+
+                $this->form_validation->set_rules('title', 'Title', 'required');
+                $this->form_validation->set_rules('text', 'Text', 'required');
+
+                if ($this->form_validation->run() === FALSE)
+                {
+                    $this->load->view('templates/header', $data);
+                    $this->load->view('news/index2', $data);
+                    $this->load->view('templates/footer');
+
+                }
+                else
+                {
+                    $this->news_model->set_news();
+                    $this->load->view('templates/header', $data);
+                    $this->load->view('news/index2', $data);
+                    $this->load->view('templates/footer');
+                }
         }
 
         public function view($slug = NULL)
@@ -51,6 +71,53 @@ class News extends CI_Controller {
 				$this->load->view('news/create');
 				$this->load->view('templates/footer');
 		
+			}
+			else
+			{
+				$this->news_model->set_news();
+                $this->load->view('news/success', $data);
+
+			}
+		}
+
+        public function create2()
+        {
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+
+            $data['title'] = 'Create a news item';
+
+            $this->form_validation->set_rules('title', 'Title', 'required');
+            $this->form_validation->set_rules('text', 'Text', 'required');
+
+            if ($this->form_validation->run() === FALSE) {
+                $this->load->view('templates/header', $data);
+                $this->load->view('news/create');
+                $this->load->view('templates/footer');
+
+            } else {
+                $this->news_model->set_news();
+                $this->load->view('templates/header', $data);
+                $this->load->view('news/index2', $data);
+                $this->load->view('templates/footer');
+            }
+        }
+		public function register()
+		{
+			$this->load->helper('form');
+			$this->load->library('form_validation');
+
+			$data['title'] = 'Register';
+
+			$this->form_validation->set_rules('email', 'Email', 'required');
+			$this->form_validation->set_rules('pwd', 'Pwd', 'required');
+
+			if ($this->form_validation->run() === FALSE)
+			{
+				$this->load->view('templates/header', $data);
+				$this->load->view('news/register');
+				$this->load->view('templates/footer');
+
 			}
 			else
 			{
