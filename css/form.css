@@ -1,13 +1,13 @@
-html, body, h1, form, fieldset, legend, ol, li {
+html, h1, form, fieldset, legend, ol, li {
 	margin: 0;
 	padding: 0;
 }
-body {
-	background: #ffffff;
-	color: #111111;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	padding: 20px;
-}
+/*body {*/
+	/*background: #ffffff;*/
+	/*color: #111111;*/
+	/*font-family: Georgia, "Times New Roman", Times, serif;*/
+	/*padding: 20px;*/
+/*}*/
 
 
 form#payment {
@@ -79,15 +79,7 @@ form#payment fieldset fieldset label {
 	padding: 0 0 0 30px;
 	width: auto;
 }
-form#payment label[for=visa] {
-	background-image: url(visa.gif);
-}
-form#payment label[for=amex] {
-	background-image: url(amex.gif);
-}
-form#payment label[for=mastercard] {
-	background-image: url(mastercard.gif);
-}
+
 form#payment fieldset fieldset label:hover {
 	cursor: pointer;
 }
