@@ -4,8 +4,7 @@
 <div class="row">
 
     <div class="col-sm-4">
-        <h3>Column3</h3>
-        <h2><?php echo $title; ?></h2>
+        <h3><?php echo $title; ?></h3>
         <?php echo validation_errors(); ?>
         <?php echo form_open('news/'); ?>
 
