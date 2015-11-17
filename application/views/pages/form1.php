@@ -1,10 +1,4 @@
-<?$this->load->helper('url');?>  
-<!--<head>
-    <meta charset="UTF-8">
-    <title>form</title>       
-    <link rel="stylesheet" type="text/css" href="<?=base_url("css/form.css")?>">
-</head>  -->
-<body>
+
 <link rel="stylesheet" type="text/css" href="<?=base_url("css/form.css")?>">
 <form id=payment>
     <fieldset>
@@ -42,44 +36,6 @@
         </ol>
     </fieldset>
     <fieldset>
-        <legend>Card details</legend>
-        <ol>
-            <li>
-                <fieldset>
-                    <legend>Card type</legend>
-                    <ol>
-                        <li>
-                            <input id=visa name=cardtype type=radio>
-                            <label for=visa>VISA</label>
-                        </li>
-                        <li>
-                            <input id=amex name=cardtype type=radio>
-                            <label for=amex>AmEx</label>
-                        </li>
-                        <li>
-                            <input id=mastercard name=cardtype type=radio>
-                            <label for=mastercard>Mastercard</label>
-                        </li>
-                    </ol>
-                </fieldset>
-            </li>
-            <li>
-                <label for=cardnumber>Card number</label>
-                <input id=cardnumber name=cardnumber type=number required>
-            </li>
-            <li>
-                <label for=secure>Security code</label>
-                <input id=secure name=secure type=number required>
-            </li>
-            <li>
-                <label for=namecard>Name on card</label>
-                <input id=namecard name=namecard type=text placeholder="Exact name as on the card" required>
-            </li>
-        </ol>
-    </fieldset>
-    <fieldset>
         <button type=submit>Buy it!</button>
     </fieldset>
 </form>
-</body>
-</html>
