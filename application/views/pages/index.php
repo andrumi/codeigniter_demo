@@ -1,59 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>HTML5 File Drag &amp; Drop API</title>
-    <link rel="stylesheet" type="text/css" media="all" href="<?=base_url("css/styles.css")?>" />
-
-</head>
-<body>
-
-<h1>HTML5 File Drag &amp; Drop API</h1>
-
-<p>This is a demonstration of the HTML5 file drag &amp; drop API with asynchronous Ajax file uploads, graphical progress bars and progressive enhancement.</p>
-
-<p>For more information, please refer to:</p>
-<ul>
-    <li><a href="http://www.sitepoint.com/html5-file-drag-and-drop/">How to Use HTML5 File Drag &amp Drop</a></li>
-    <li><a href="http://www.sitepoint.com/html5-javascript-open-dropped-files">How to Open Dropped Files Using HTML5 and JavaScript</a></li>
-    <li><a href="http://www.sitepoint.com/html5-ajax-file-upload">How to Asynchronously Upload Files Using HTML5 and Ajax</a></li>
-    <li><a href="http://www.sitepoint.com/html5-javascript-file-upload-progress-bar">How to Create File Upload Progress Bars in HTML5 and JavaScript</a></li>
-</ul>
-
-
-<form id="upload" action="upload" method="POST" enctype="multipart/form-data">
-
-    <fieldset>
-        <legend>HTML File Upload</legend>
-
-        <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="1000000" />
-
-        <div>
-            <label for="fileselect">Files to upload:</label>
-            <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
-            <div id="filedrag">or drop files here</div>
+<link rel="stylesheet" type="text/css" media="all" href="<?=base_url("css/styles.css")?>" />
+<div class="row">
+    <div class="col-sm-4">
+      <h3>Register</h3>
+       <h2>Log On</h2>
+        <form role="form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
         </div>
+    <div class="col-sm-4">
+    <link rel="stylesheet" type="text/css" href="<?=base_url("css/formupload.css")?>">
+    <form id="upload" action="upload" method="POST" enctype="multipart/form-data">
+<!--    <form id=payment>-->
+        <fieldset>
+            <legend>Your details</legend>
+            <ol>
+                <li>
+                    <label for=username>Username</label>
+                    <input id=username name=username type=text placeholder="username" required autofocus>
+                </li>
+                <li>
+                    <label for=email>Email</label>
+                    <input id=email name=email type=email placeholder="example@domain.com" required>
+                </li>
+                <li>
+                    <label for=town>Town</label>
+                    <input id=town name=town type=text placeholder="town" required>
+                </li>
+                <li>
+                    <label for=password>Password</label>
+<!--                    <input id=password name=password type=tel placeholder="town" required>-->
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" required>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Upload Photo</legend>
+            <ol>
 
-        <div id="submitbutton">
-            <button type="submit">Upload Files</button>
-        </div>
+                <li>
+                    <fieldset>
+                        <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="1000000" />
 
-    </fieldset>
+                        <div>
+                            <label for="fileselect">Files to upload:</label>
+                            <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+                            <div id="filedrag">or drop files here</div>
+                        </div>
 
-</form>
+                        <div id="submitbutton">
+                            <button type="submit">Upload Files</button>
+                        </div>
 
-<div id="progress"></div>
+                    </fieldset>
+                    <div id="progress"></div>
+                    <div id="messages">
+                        <p>Status Messages</p>
+                    </div>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <button type=submit>Register</button>
+        </fieldset>
+    </form>
 
-<div id="messages">
-    <p>Status Messages</p>
-</div>
+    </div>
 
-
-<h2>Disclaimer</h2>
-<p>The code was developed by <a href="http://twitter.com/craigbuckler">Craig Buckler</a> of <a href="http://optimalworks.net/">OptimalWorks.net</a> for <a href="http://sitepoint.com/">SitePoint.com</a>.</p>
-
-<p>This code can be <a href="http://blogs.sitepointstatic.com/examples/tech/filedrag/3/filedrag3.zip">downloaded and used</a> without any restrictions but please don't expect support! A link back to SitePoint.com is appreciated.</p>
-
-<script type="text/javascript" src="<?=base_url("js/filedrag.js")?>" ></script>
-</body>
-</html>
+    </div>
+    <script type="text/javascript" src="<?=base_url("js/filedrag.js")?>" ></script>
