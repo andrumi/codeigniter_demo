@@ -25,7 +25,8 @@
                      <li><a href="#">Page 3</a></li>
                  </ul>
                  <ul class="nav navbar-nav navbar-right">
-                     <li><a href="<?php echo site_url('news/register'); ?>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+<!--                     <li><a href="--><?php //echo site_url('news/register'); ?><!--"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+                     <li><a href="<?php echo site_url('pages/view/index'); ?>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 <!--                     <li><a href="../../pages/view/logon"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
                      <li><a href="<?php echo site_url('pages/view/logon/'); ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                      <li class="dropdown">
