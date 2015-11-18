@@ -10,7 +10,7 @@ html, h1, form, fieldset, legend, ol, li {
 /*}*/
 
 
-form#payment {
+form#upload {
 	background: #9cbc2c;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -19,15 +19,15 @@ form#payment {
 	width: 400px;
 }
 
-form#payment fieldset {
+form#upload fieldset {
 	border: none;
 	margin-bottom: 10px;
 }
-form#payment fieldset:last-of-type {
+form#upload fieldset:last-of-type {
 	margin-bottom: 0;
 }
 
-form#payment legend {
+form#upload legend {
 	color: #384313;
 	font-size: 16px;
 	font-weight: bold;
@@ -35,18 +35,18 @@ form#payment legend {
 	text-shadow: 0 1px 1px #c0d576;
 }
 
-form#payment > fieldset > legend:before {
+form#upload > fieldset > legend:before {
 	content: "Step " counter(fieldsets) ": ";
 	counter-increment: fieldsets;
 }
 
-form#payment fieldset fieldset legend {
+form#upload fieldset fieldset legend {
 	color: #111111;
 	font-size: 13px;
 	font-weight: normal;
 	padding-bottom: 0;
 }
-form#payment ol li {
+form#upload ol li {
 	background: #b9cf6a;
 	background: rgba(255,255,255,.3);
 	border-color: #e3ebc3;
@@ -61,29 +61,29 @@ form#payment ol li {
 	padding: 5px 10px;
 	margin-bottom: 2px;
 }
-form#payment ol ol li {
+form#upload ol ol li {
 	background: none;
 	border: none;
 	float: left;
 }
 
-form#payment label {
+form#upload label {
 	float: left;
 	font-size: 13px;
 	width: 110px;
 }
-form#payment fieldset fieldset label {
+form#upload fieldset fieldset label {
 	background:none no-repeat left 50%;
 	line-height: 20px;
 	padding: 0 0 0 30px;
 	width: auto;
 }
 
-form#payment fieldset fieldset label:hover {
+form#upload fieldset fieldset label:hover {
 	cursor: pointer;
 }
-form#payment input:not([type=radio]),
-form#payment textarea {
+form#upload input:not([type=radio]),
+form#upload textarea {
 	background: #ffffff;
 	border: none;
 	-moz-border-radius: 3px;
@@ -95,15 +95,15 @@ form#payment textarea {
 	padding: 5px;
 	width: 200px;
 }
-form#payment input:not([type=submit]):focus,
-form#payment textarea:focus {
+form#upload input:not([type=submit]):focus,
+form#upload textarea:focus {
 	background: #eaeaea;
 }
-form#payment input[type=radio] {
+form#upload input[type=radio] {
 	float: left;
 	margin-right: 5px;
 }
-form#payment button {
+form#upload button {
 	background: #384313;
 	border: none;
 	-moz-border-radius: 20px;
@@ -119,7 +119,7 @@ form#payment button {
 	text-shadow: 0 1px 1px #000000;
 	text-transform: uppercase;
 }
-form#payment button:hover {
+form#upload button:hover {
 	background: #1e2506;
 	cursor: pointer;
 }
