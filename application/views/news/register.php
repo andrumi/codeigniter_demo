@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" media="all" href="<?=base_url("css/styles.css")?>" />
 <div class="row">
     <div class="col-sm-4">
       <h3>Register</h3>
@@ -81,5 +82,35 @@
             <button type=submit>Register</button>
         </fieldset>
     </form>
+
         </div>
+        <div class="col-sm-4">
+            <h3>Register</h3>
+            <form id="upload" action="upload" method="POST" enctype="multipart/form-data">
+
+                <fieldset>
+                    <legend>HTML File Upload</legend>
+
+                    <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="1000000" />
+
+                    <div>
+                        <label for="fileselect">Files to upload:</label>
+                        <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+                        <div id="filedrag">or drop files here</div>
+                    </div>
+
+                    <div id="submitbutton">
+                        <button type="submit">Upload Files</button>
+                    </div>
+
+                </fieldset>
+            </form>
+            <div id="progress"></div>
+            <div id="messages">
+                <p>Status Messages</p>
+            </div>
+
+        </div>
+
     </div>
+    <script type="text/javascript" src="<?=base_url("js/filedrag.js")?>" ></script>
