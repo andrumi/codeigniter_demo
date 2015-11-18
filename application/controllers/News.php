@@ -13,7 +13,7 @@ class News extends CI_Controller {
                 $this->load->helper('form');
                 $this->load->library('form_validation');
                 $data['news'] = $this->news_model->get_news();
-				$data['title'] = 'News archive';
+			        	$data['title'] = 'News archive';
 
                 $this->form_validation->set_rules('title', 'Title', 'required');
                 $this->form_validation->set_rules('text', 'Text', 'required');
