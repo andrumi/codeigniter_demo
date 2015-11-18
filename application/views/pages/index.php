@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?=base_url("css/styles.css")?>" />
+<link rel="stylesheet" type="text/css" href="<?=base_url("css/formupload.css")?>">
 <div class="row">
     <div class="col-sm-4">
       <h3>Register</h3>
@@ -19,9 +20,8 @@
           </form>
         </div>
     <div class="col-sm-4">
-    <link rel="stylesheet" type="text/css" href="<?=base_url("css/formupload.css")?>">
+
     <form id="upload" action="upload" method="POST" enctype="multipart/form-data">
-<!--    <form id=payment>-->
         <fieldset>
             <legend>Your details</legend>
             <ol>
@@ -39,7 +39,6 @@
                 </li>
                 <li>
                     <label for=password>Password</label>
-<!--                    <input id=password name=password type=tel placeholder="town" required>-->
                     <input type="password" class="form-control" id="pwd" placeholder="Enter password" required>
                 </li>
             </ol>
@@ -47,7 +46,6 @@
         <fieldset>
             <legend>Upload Photo</legend>
             <ol>
-
                 <li>
                     <fieldset>
                         <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="1000000" />
@@ -57,11 +55,9 @@
                             <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
                             <div id="filedrag">or drop files here</div>
                         </div>
-
                         <div id="submitbutton">
                             <button type="submit">Upload Files</button>
                         </div>
-
                     </fieldset>
                     <div id="progress"></div>
                     <div id="messages">
