@@ -1,6 +1,6 @@
  <!-- application/views/search/form.php -->
 
-<h2>Ajax search</h2>
+<h2>News Search</h2>
 
 <script>
 
