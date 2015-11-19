@@ -12,15 +12,9 @@ class Ajax extends CI_Controller
         }
    public function getdata($param = '')
    {
-      // Get data from db
-      //$data['ajaxdata'] = "Search result for $param";
-      // Get data from db   $data['news'] = $this->Ajax_model->get_search($param);
+      $data['ajaxdata1'] = "Search result for $param";
       $data['ajaxdata'] = $this->ajax_model->get_search($param);
-      
-      print("Alix:");
-      print_r($data['ajaxdata']);
-  
-      // Pass data to view
+
       $this->load->view('ajax/index', $data);
    }
 }
