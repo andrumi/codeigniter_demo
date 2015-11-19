@@ -6,13 +6,11 @@ class Ajax_model extends CI_Model {
               $this->load->database();
       }
 		
-		
-      public function get_search($slug)
+      public function get_search($param)
       {
-          
-          $query = $this->db->get_where('news', array('slug' => $slug));                   
-          
-          return $query->row_array();  
-      }  			
+          $this->db->like('title', $param);
+          $query = $this->db->get('news');
+          return $query->result_array();
+      }
 
 }
