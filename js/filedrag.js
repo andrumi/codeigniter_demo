@@ -85,8 +85,6 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 	// upload JPEG files
 	function UploadFile(file) {
 
-		// following line is not necessary: prevents running on SitePoint servers
-		if (location.host.indexOf("sitepointstatic") >= 0) return
 
 		var xhr = new XMLHttpRequest();
 		if (xhr.upload && file.type == "image/jpeg" && file.size <= $id("MAX_FILE_SIZE").value) {
