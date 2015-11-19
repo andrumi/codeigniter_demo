@@ -32,9 +32,9 @@ class Pages extends CI_Controller {
             $data['title'] = 'Register';
 
             $this->form_validation->set_rules('username', 'Username', 'required');
-//            $this->form_validation->set_rules('email', 'Email', 'required');
-//            $this->form_validation->set_rules('town', 'Town', 'required');
-//            $this->form_validation->set_rules('password', 'Password', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required');
+            $this->form_validation->set_rules('town', 'Town', 'required');
+            $this->form_validation->set_rules('password', 'Password', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {

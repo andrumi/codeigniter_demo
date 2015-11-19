@@ -21,7 +21,7 @@
         </div>
     <div class="col-sm-4">
 <!--        **********NONSENSE WITH FORMS***************-->
-    <form id="Form1" action="pages/index" method="post"></form>
+    <form id="Form1" action="<?=base_url("index.php/pages/index")?>" method="post"></form>
     <form id="upload" action="upload" method="POST" enctype="multipart/form-data">
         <fieldset>
             <legend>Your details</legend>
@@ -49,15 +49,15 @@
             <ol>
                 <li>
                     <fieldset>
-                        <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="1000000" />
+                        <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="10000000" />
 
                         <div>
                             <label for="fileselect">Files to upload:</label>
                             <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" form="upload"/>
-                            <div id="filedrag">or drop files here</div>
+                            <div id="filedrag" >or drop files here</div>
                         </div>
                         <div id="submitbutton">
-                            <button type="submit">Upload Files</button>
+                            <button type="submit" form="upload" >Upload Files</button>
                         </div>
                     </fieldset>
                     <div id="progress"></div>
@@ -73,7 +73,7 @@
 
         </fieldset>
     </form>
-    </form>
+
     </div>
 
     </div>
