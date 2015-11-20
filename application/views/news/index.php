@@ -9,7 +9,7 @@
             <p><label>Title:</label></p>
             <p><input type="title" name="title" id="title" class="stored" value="" /></p>
             <p><label>News:</label></p>
-            <p><input type="textarea" rows="4" size="20" name="text" id="text" class="stored" value="" /></p>
+            <p><input type="textarea" spellcheck="true" rows="4" size="20" name="text" id="text" class="stored" value="" /></p>
             <input type="submit" class="demo-button" value="Submit" />
         </form>
     </div>
