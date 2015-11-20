@@ -64,6 +64,8 @@
                     <div id="messages">
                         <p>Status Messages</p>
                     </div>
+
+                    <input id="filename" type="text" form = "Form1"/>
                 </li>
             </ol>
         </fieldset>
@@ -72,6 +74,7 @@
             <input type="submit" name="button1" value="Register" form="Form1" />
 
         </fieldset>
+
     </form>
 
     </div>
@@ -79,6 +82,17 @@
     </div>
     <script type="text/javascript" src="<?=base_url("js/filedrag.js")?>" ></script>
 
+<script>//jquery
+    $('#fileselect').change(function() {
+        var filename = $(this).val();
+        var lastIndex = filename.lastIndexOf("\\");
+        if (lastIndex >= 0) {
+            filename = filename.substring(lastIndex + 1);
+        }
+        $('#filename').val(filename);
+    });
+
+</script>
 <!-- Nested forms?
 <form id="Form1" action="Action1.php" method="post"></form>
 <form id="Form2" action="Action2.php" method="post"></form>

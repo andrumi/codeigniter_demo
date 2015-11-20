@@ -61,8 +61,11 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 				Output(
 					"<p><strong>" + file.name + ":</strong><br />" +
 					'<img src="' + e.target.result + '" /></p>'
+
 				);
 			}
+            //document.getElementById("#filename").innerHTML = file.name;
+            $('#filename').val(file.name);
 			reader.readAsDataURL(file);
 		}
 
@@ -74,6 +77,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 					"<p><strong>" + file.name + ":</strong></p><pre>" +
 					e.target.result.replace(/</g, "&lt;").replace(/>/g, "&gt;") +
 					"</pre>"
+
 				);
 			}
 			reader.readAsText(file);
