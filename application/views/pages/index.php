@@ -23,7 +23,8 @@
     <div class="col-sm-4">
 <!--        **********NONSENSE WITH FORMS***************-->
     <form id="Form1" action="<?=base_url("index.php/pages/index")?>" method="post"></form>
-    <form id="upload" action="upload" method="POST" enctype="multipart/form-data">
+<!--    <form id="upload" action="upload" method="POST" enctype="multipart/form-data">-->
+        <form id="upload" action="<?=base_url("js/upload")?>" method="POST" enctype="multipart/form-data">
         <fieldset>
             <legend>Your details</legend>
             <ol>
@@ -94,15 +95,3 @@
     });
 
 </script>
-<!-- Nested forms?
-<form id="Form1" action="Action1.php" method="post"></form>
-<form id="Form2" action="Action2.php" method="post"></form>
-
-<input type="text" name="input_Form1_n1" form="Form1" />
-<input type="text" name="input_Form2_n1" form="Form2" />
-<input type="text" name="input_Form1_n2" form="Form1" />
-<input type="text" name="input_Form2_n2" form="Form2" />
-
-<input type="submit" name="button1" value="buttonVal1" form="Form1" />
-<input type="submit" name="button2" value="buttonVal2" form="Form2" />
--->
