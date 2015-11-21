@@ -5,19 +5,20 @@
       <h3>Register</h3>
        <h2>Log On</h2>
 <!--        <form role="form">-->
-<!--            <div class="form-group">-->
-<!--                <label for="email">Email:</label>-->
-<!--                <input type="email" class="form-control" id="email" placeholder="Enter email">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <label for="pwd">Password:</label>-->
-<!--                <input type="password" class="form-control" id="pwd" placeholder="Enter password">-->
-<!--            </div>-->
-<!--            <div class="checkbox">-->
-<!--                <label><input type="checkbox"> Remember me</label>-->
-<!--            </div>-->
-<!--            <button type="submit" class="btn btn-default">Submit</button>-->
-<!--          </form>-->
+        <form id="Form2" action="<?=base_url("index.php/pages/logOn")?>" method="post"></form>
+            <div class="form-group">
+                <label for="emailLog">Email:</label>
+                <input type="email" class="form-control" name ="emailLog" id="emailLog" placeholder="Enter email" form="Form2" >
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" name ="pwd" id="pwd" placeholder="Enter password" form ="Form2">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default"  form="Form2"> Submit</button>
+          </form>
         </div>
     <div class="col-sm-4">
 <!--        **********NONSENSE WITH FORMS***************-->
@@ -65,7 +66,7 @@
                         <p>Status Messages</p>
                     </div>
 
-                    <input id="filename" type="text" form = "Form1"/>
+                    <input id="filename" name="filename" type="text" form = "Form1"/>
                 </li>
             </ol>
         </fieldset>
