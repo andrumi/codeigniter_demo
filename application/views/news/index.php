@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-4">
         <h2>Share Your News</h2>
-        <form id="localStorageTest" method="post" action="<?=base_url("index.php/news/")?>">
+        <form id="localStorageTest" method="post" action="<?=base_url("index.php/news/index")?>">
 
             <p><label>Title:</label></p>
             <p><input type="title" name="title" id="title" class="stored" value="" /></p>
@@ -73,3 +73,4 @@
 
 </div>
 <script type="text/javascript" src="<?=base_url("js/formSaver.js")?>" ></script>
+//<script type="text/javascript" src="<?=base_url("js/doSearch.js")?>" ></script>
