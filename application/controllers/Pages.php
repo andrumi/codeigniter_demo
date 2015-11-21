@@ -8,7 +8,7 @@ class Pages extends CI_Controller {
 
         }
 
-        public function view($page = 'home')
+        public function view($page = 'index')
         {
 		   
            if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
@@ -38,20 +38,53 @@ class Pages extends CI_Controller {
 
             if ($this->form_validation->run() === FALSE)
             {
-                $this->load->view('templates/header', $data);
-                $this->load->view('pages/index');
-                $this->load->view('templates/footer');
 
+                    $this->load->view('templates/header', $data);
+                    $this->load->view('pages/index');
+                    $this->load->view('templates/footer');
             }
             else
             {
                 $this->pages_model->register();
+                $this->load->view('templates/header', $data);
+                redirect("news/index");
+                $this->load->view('templates/footer');
+            }
+        }
 
+        public function logOn(){
+
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+
+            $data['title'] = 'Register';
+
+            $this->form_validation->set_rules('emailLog', 'EmailLog', 'required');
+            $this->form_validation->set_rules('pwd', 'Pwd', 'required');
+
+            if ($this->form_validation->run() === FALSE)
+            {
                 $this->load->view('templates/header', $data);
                 $this->load->view('pages/index');
                 $this->load->view('templates/footer');
-
+            }
+            else
+            {
+                $checker = $this->pages_model->logOn();
+                if ($checker == true){
+                    $data['title'] = 'News Archive';
+                    $this->load->view('templates/header', $data);
+                    redirect("news/index");
+                    $this->load->view('templates/footer');
+                }
+                else {
+                    $data['title'] = 'Failed LogOn';
+                    $this->load->view('templates/header', $data);
+                    $this->load->view('pages/index');
+                    $this->load->view('templates/footer');
+                }
             }
         }
 }
 ?>
+
