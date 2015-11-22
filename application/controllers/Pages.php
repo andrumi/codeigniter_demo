@@ -19,7 +19,7 @@ class Pages extends CI_Controller {
 
         $data['title'] = ucfirst($page); // Capitalize the first letter
 
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/header2', $data);
         $this->load->view('pages/'.$page, $data);
         $this->load->view('templates/footer', $data);
         }
@@ -39,7 +39,7 @@ class Pages extends CI_Controller {
             if ($this->form_validation->run() === FALSE)
             {
 
-                    $this->load->view('templates/header', $data);
+                    $this->load->view('templates/header2', $data);
                     $this->load->view('pages/index');
                     $this->load->view('templates/footer');
             }
