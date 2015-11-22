@@ -53,6 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;*/
 
+$route['chatter/(:any)'] = 'chatter/index';
+$route['chatter'] = 'chatter';
 $route['news/(:any)'] = 'news/index';
 $route['news'] = 'news';
 $route['(:any)'] = 'pages/view/$1';
