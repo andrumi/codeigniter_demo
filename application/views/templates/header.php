@@ -22,7 +22,7 @@
                  <ul class="nav navbar-nav">
                      <li class="active"><a href="<?php echo site_url('news/'); ?>">Home</a></li>
                      <li><a href="<?php echo site_url('news/create'); ?>">Create</a></li>
-                     <li><a href="#">Page 3</a></li>
+                     <li><a href="<?php echo site_url('chatter/'); ?>">Chat</a></li>
                  </ul>
                  <ul class="nav navbar-nav navbar-right">
 <!--                     <li><a href="--><?php //echo site_url('news/register'); ?><!--"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
