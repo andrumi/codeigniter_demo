@@ -1,32 +1,42 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?=base_url("css/styles.css")?>" />
 <link rel="stylesheet" type="text/css" href="<?=base_url("css/formupload.css")?>">
 <div class="row">
-    <div class="col-sm-4">
-      <h3>Register</h3>
-       <h2>Log On</h2>
-<!--        <form role="form">-->
-        <form id="Form2" action="<?=base_url("index.php/pages/logOn")?>" method="post"></form>
-            <div class="form-group">
-                <label for="emailLog">Email:</label>
-                <input type="email" class="form-control" name ="emailLog" id="emailLog" placeholder="Enter email" form="Form2" >
-            </div>
-            <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" class="form-control" name ="pwd" id="pwd" placeholder="Enter password" form ="Form2">
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox"> Remember me</label>
-            </div>
-            <button type="submit" class="btn btn-default"  form="Form2"> Submit</button>
-          </form>
+    <div class="col-sm-3">
+      <h2>Register or Log On</h2>
+<!--       <h2>Log On</h2>-->
+<!---->
+<!--        <form id="Form2" action="--><?//=base_url("index.php/pages/logOn")?><!--" method="post">-->
+<!--        <fieldset>-->
+<!--        <legend><h2>Log On</h2></legend>-->
+<!--        <ol>-->
+<!--            <li>-->
+<!--                <label for="emailLog">Email:</label>-->
+<!--                <input type="email" class="form-control" name ="emailLog" id="emailLog" placeholder="Enter email" form="Form2" >-->
+<!---->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <label for="pwd">Password:</label>-->
+<!--                <input type="password" class="form-control" name ="pwd" id="pwd" placeholder="Enter password" form ="Form2">-->
+<!--            </li>-->
+<!--            <li>-->
+<!--            <div class="checkbox">-->
+<!--                <label><input type="checkbox"> Remember me</label>-->
+<!--            </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--            <button type="submit" class="btn btn-default"  form="Form2"> Submit</button>-->
+<!--            </li>-->
+<!--        </ol>-->
+<!--        </fieldset>-->
+<!--        </form>-->
         </div>
     <div class="col-sm-4">
-<!--        **********NONSENSE WITH FORMS***************-->
+
     <form id="Form1" action="<?=base_url("index.php/pages/index")?>" method="post"></form>
-<!--    <form id="upload" action="upload" method="POST" enctype="multipart/form-data">-->
+
         <form id="upload" action="<?=base_url("js/upload")?>" method="POST" enctype="multipart/form-data">
         <fieldset>
-            <legend>Your details</legend>
+            <legend><h2>Register Your details<h2></legend>
             <ol>
                 <li>
                     <label for=username>Username</label>
@@ -72,16 +82,48 @@
             </ol>
         </fieldset>
         <fieldset>
-<!--            <button type=submit>Register</button>-->
-            <input type="submit" name="button1" value="Register" form="Form1" />
-
+            <legend>Register</legend>
+            <ol>
+                <li>
+<!--                    <input type="submit" name="button1" value="Register" form="Form1" />-->
+                    <button type="submit" class="btn btn-default"  form="Form1"> Register</button>
+                </li>
+            </ol>
         </fieldset>
 
     </form>
 
     </div>
+    <div class="col-sm-3">
 
+        <h2>Log On</h2>
+
+        <form id="Form2" action="<?=base_url("index.php/pages/logOn")?>" method="post">
+            <fieldset>
+                <legend><h2>Log On</h2></legend>
+                <ol>
+                    <li>
+                        <label for="emailLog">Email:</label>
+                        <input type="email" class="form-control" name ="emailLog" id="emailLog" placeholder="Enter email" form="Form2" >
+
+                    </li>
+                    <li>
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" name ="pwd" id="pwd" placeholder="Enter password" form ="Form2">
+                    </li>
+                    <li>
+<!--                        <div class="checkbox">-->
+                            <label><input type="checkbox"> Remember me</label>
+<!--                        </div>-->
+                    </li>
+                    <li>
+                        <button type="submit" class="btn btn-default"  form="Form2"> Submit</button>
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
     </div>
+</div>
     <script type="text/javascript" src="<?=base_url("js/filedrag.js")?>" ></script>
 
 <script>//jquery
