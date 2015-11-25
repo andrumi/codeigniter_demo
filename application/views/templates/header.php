@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
  <?$this->load->helper('url');?>
 <html>
@@ -13,21 +13,24 @@
 
     </head>
      <body>
-     <nav class="navbar navbar-default">
+     <nav class="navbar navbar-inverse">
          <div class="container-fluid">
              <div class="navbar-header">
-                 <a class="navbar-brand" href="#">WebSiteName</a>
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+                 <a class="navbar-brand" href="#">SmurfNews</a>
              </div>
-             <div>
+             <div class="collapse navbar-collapse" id="myNavbar">
                  <ul class="nav navbar-nav">
                      <li class="active"><a href="<?php echo site_url('news/'); ?>">Home</a></li>
                      <li><a href="<?php echo site_url('news/create'); ?>">Create</a></li>
                      <li><a href="<?php echo site_url('chatter/'); ?>">Chat</a></li>
                  </ul>
                  <ul class="nav navbar-nav navbar-right">
-<!--                     <li><a href="--><?php //echo site_url('news/register'); ?><!--"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
-                     <li><a href="<?php echo site_url('pages/view/index'); ?>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-<!--                     <li><a href="../../pages/view/logon"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+                     <li><a href="<?php echo site_url('pages/view/index'); ?>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
                      <li><a href="<?php echo site_url('pages/view/logon/'); ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                      <li class="dropdown">
                          <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login<strong class="caret"></strong></a>
@@ -47,6 +50,6 @@
          </div>
      </nav>
      <div class ="container-fluid">
-<!--     <div class ="fixed-bg">-->
+
 
 
