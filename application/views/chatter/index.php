@@ -9,7 +9,12 @@
 
 <div class="jumbotron">
     <h1><?php echo $title; ?></h1>
-    <section id="new_message">
+    
+
+</div>
+<div class="row">
+    <div class="col-sm-6">
+      <section id="new_message">
         <form>
             <input type="text" id="name" name ="name" placeholder="Your name">
             <input type="text" id="yourmessage" name = "yourmessage" placeholder="Comment">
@@ -18,17 +23,7 @@
         </form>
     </section>
     <section id="messages" aria-live="polite" ></section>
-
-</div>
-
-<!--<section id="new_message">
-    <form>
-        <input type="text" id="name" name ="name" placeholder="Your name">
-        <input type="text" id="yourmessage" name = "yourmessage" placeholder="Comment">
-        <input type="button" id="postit" value="Post">
-        <span id="debugmessage"></span>
-    </form>
-</section>
-<section id="messages" aria-live="polite" ></section>-->
+    </div>
+    
 
 
