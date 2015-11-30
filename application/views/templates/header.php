@@ -28,6 +28,7 @@
                      <li class="active"><a href="<?php echo site_url('news/'); ?>">Home</a></li>
                      <li><a href="<?php echo site_url('news/create'); ?>">Create</a></li>
                      <li><a href="<?php echo site_url('chatter/'); ?>">Chat</a></li>
+                     <li><a href="<?php echo site_url('ebay/'); ?>">Shop</a></li>
                  </ul>
                  <ul class="nav navbar-nav navbar-right">
                      <li><a href="<?php echo site_url('pages/view/index'); ?>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
