@@ -8,7 +8,7 @@ body{
 }
 
 .container-fluid{
-    padding: 1em 1em 1em 1em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
     margin: auto;
     background: #ffffff;
 }
@@ -50,10 +50,10 @@ form#Form2 legend {
     padding-bottom: 10px;
     text-shadow: 0 1px 1px #72bad5;
 }
-form#upload > fieldset > legend:before {
-	content: "Step " counter(fieldsets) ": ";
-	counter-increment: fieldsets;
-}
+/*form#upload > fieldset > legend:before {*/
+	/*content: "Step " counter(fieldsets) ": ";*/
+	/*counter-increment: fieldsets;*/
+/*}*/
 
 form#upload fieldset fieldset legend {
 	color: #111111;
@@ -200,7 +200,7 @@ form#Form2 textarea:focus {
 }
 form#Form2 input[type=radio] {
     float: left;
-    margin-right: 5px;
+    padding: 0em 0em 0em 0em;
 }
 form#Form2 button {
     background: #4d7fcf;
