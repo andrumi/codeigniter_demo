@@ -3,33 +3,7 @@
 <div class="row">
     <div class="col-sm-3">
       <h2>Register or Log On</h2>
-<!--       <h2>Log On</h2>-->
-<!---->
-<!--        <form id="Form2" action="--><?//=base_url("index.php/pages/logOn")?><!--" method="post">-->
-<!--        <fieldset>-->
-<!--        <legend><h2>Log On</h2></legend>-->
-<!--        <ol>-->
-<!--            <li>-->
-<!--                <label for="emailLog">Email:</label>-->
-<!--                <input type="email" class="form-control" name ="emailLog" id="emailLog" placeholder="Enter email" form="Form2" >-->
-<!---->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <label for="pwd">Password:</label>-->
-<!--                <input type="password" class="form-control" name ="pwd" id="pwd" placeholder="Enter password" form ="Form2">-->
-<!--            </li>-->
-<!--            <li>-->
-<!--            <div class="checkbox">-->
-<!--                <label><input type="checkbox"> Remember me</label>-->
-<!--            </div>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--            <button type="submit" class="btn btn-default"  form="Form2"> Submit</button>-->
-<!--            </li>-->
-<!--        </ol>-->
-<!--        </fieldset>-->
-<!--        </form>-->
-        </div>
+    </div>
     <div class="col-sm-4">
 
     <form id="Form1" action="<?=base_url("index.php/pages/index")?>" method="post"></form>
@@ -112,9 +86,9 @@
                         <input type="password" class="form-control" name ="pwd" id="pwd" placeholder="Enter password" form ="Form2">
                     </li>
                     <li>
-<!--                        <div class="checkbox">-->
-                            <label><input type="checkbox"> Remember me</label>
-<!--                        </div>-->
+                        <div class="checkbox">
+                            <label>Remember Me<input type="checkbox" name="checkbox" value="value"></label>
+                        </div>
                     </li>
                     <li>
                         <button type="submit" class="btn btn-default"  form="Form2"> Submit</button>
