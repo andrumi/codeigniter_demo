@@ -5,31 +5,43 @@ class Pages extends CI_Controller {
         {
             parent::__construct();
             $this->load->model('pages_model');
-
+            $this->load->library('user_agent');
+            $this->load->helper('form');
+            $this->load->library('form_validation');
         }
 
         public function view($page = 'index')
         {
-		   
-           if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
+            if ( ! file_exists(APPPATH.'/views/pages/'.$page.'.php'))
            {
                 // Whoops, we don't have a page for that!
 				show_404();
            }
 
-        $data['title'] = ucfirst($page); // Capitalize the first letter
+            $data['title'] = ucfirst($page); // Capitalize the first letter
 
-        $this->load->view('templates/header2', $data);
-        $this->load->view('pages/'.$page, $data);
-        $this->load->view('templates/footer', $data);
+            if ($this->agent->is_mobile()){
+                $page='indexMobile';
+            }
+
+            $this->load->view('templates/header2', $data);
+            $this->load->view('pages/'.$page, $data);
+            $this->load->view('templates/footer', $data);
+
         }
 
         public function index()
         {
-            $this->load->helper('form');
-            $this->load->library('form_validation');
+//            $this->load->helper('form');
+//            $this->load->library('form_validation');
 
-            $data['title'] = 'Register';
+            $data['title'] = 'Sign In';
+            if (!$this->agent->is_mobile()){
+                $page='index';
+            }
+            else{
+                $page='indexMobile';
+            }
 
             $this->form_validation->set_rules('username', 'Username', 'required');
             $this->form_validation->set_rules('email', 'Email', 'required');
@@ -38,34 +50,39 @@ class Pages extends CI_Controller {
 
             if ($this->form_validation->run() === FALSE)
             {
-
-                    $this->load->view('templates/header2', $data);
-                    $this->load->view('pages/index');
-                    $this->load->view('templates/footer');
+                $this->load->view('templates/header2', $data);
+                $this->load->view('pages/'.$page, $data);
+                $this->load->view('templates/footer');
             }
             else
             {
                 $this->pages_model->register();
                 $this->load->view('templates/header', $data);
-                redirect("news/index");
+                redirect('news/index');
                 $this->load->view('templates/footer');
             }
         }
 
         public function logOn(){
 
-            $this->load->helper('form');
-            $this->load->library('form_validation');
+//            $this->load->helper('form');
+//            $this->load->library('form_validation');
 
             $data['title'] = 'Register';
+            if (!$this->agent->is_mobile()){
+                $page='index';
+            }
+            else{
+                $page='indexMobile';
+            }
 
             $this->form_validation->set_rules('emailLog', 'EmailLog', 'required');
             $this->form_validation->set_rules('pwd', 'Pwd', 'required');
 
             if ($this->form_validation->run() === FALSE)
             {
-                $this->load->view('templates/header', $data);
-                $this->load->view('pages/index');
+                $this->load->view('templates/header2', $data);
+                $this->load->view('pages/'.$page, $data);
                 $this->load->view('templates/footer');
             }
             else
@@ -80,7 +97,7 @@ class Pages extends CI_Controller {
                 else {
                     $data['title'] = 'Failed LogOn';
                     $this->load->view('templates/header', $data);
-                    $this->load->view('pages/index');
+                    $this->load->view('pages/'.$page, $data);
                     $this->load->view('templates/footer');
                 }
             }
