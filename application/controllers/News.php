@@ -4,16 +4,15 @@ class News extends CI_Controller {
         public function __construct()
         {
                 parent::__construct();
-                $this->load->model('news_model');
-//                $this->load->helper('url_helper');
+                $this->load->model('news_model');                
         }
-
+       
         public function index()
         {
                 $this->load->helper('form');
                 $this->load->library('form_validation');
                 $data['news'] = $this->news_model->get_news();
-				$data['title'] = 'News archive';
+				        $data['title'] = 'News archive';
 
                 $this->form_validation->set_rules('title', 'Title', 'required');
                 $this->form_validation->set_rules('text', 'Text', 'required');

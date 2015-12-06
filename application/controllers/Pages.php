@@ -7,7 +7,9 @@ class Pages extends CI_Controller {
             $this->load->model('pages_model');
             $this->load->library('user_agent');
             $this->load->helper('form');
-            $this->load->library('form_validation');
+            $this->load->library('form_validation');  
+            
+           
         }
 
         public function view($page = 'index')
@@ -19,7 +21,7 @@ class Pages extends CI_Controller {
            }
 
             $data['title'] = ucfirst($page); // Capitalize the first letter
-
+            //$data['userLat']  =  'userLat';
             if ($this->agent->is_mobile()){
                 $page='indexMobile';
             }
