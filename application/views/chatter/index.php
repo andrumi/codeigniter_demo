@@ -13,7 +13,7 @@
 
 </div>
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-5">
       <section id="new_message">
         <form>
             <input type="text" id="name" name ="name" placeholder="Your name">
@@ -24,6 +24,15 @@
     </section>
     <section id="messages" aria-live="polite" ></section>
     </div>
-    
+    <div class ="col-sm-3" >
+        <h2><p id="demo" >Find SmurfFriends.</p></h2>
+
+        <button onclick="getLocation()">Try It</button>
+
+        <div id="mapholder"></div>
+
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript" src="<?=base_url("js/getlatlong.js")?>" ></script>
+    </div>
 </div>
 
