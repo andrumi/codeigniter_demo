@@ -16,11 +16,11 @@
                         <label for="pwd">Password:</label>
                         <input type="password" class="form-control" name ="pwd" id="pwd" placeholder="Enter password" form ="Form2">
                     </li>
-                    <li>
+                    <!--<li>
                         <div class="checkbox">
                             <label>Remember Me<input type="checkbox" name="checkbox" value="value"></label>
                         </div>
-                    </li>
+                    </li>-->
                     <li>
                         <button type="submit" class="btn btn-default"  form="Form2"> Submit</button>
                     </li>
@@ -84,7 +84,7 @@
             <legend>Register</legend>
             <ol>
                 <li>
-                    <input type="submit" name="button1" value="Register" form="Form1" />
+                    <!--<input type="submit" name="button1" value="Register" form="Form1" /> -->
                     <button type="submit" class="btn btn-default"  form="Form1"> Register</button>
                 </li>
             </ol>

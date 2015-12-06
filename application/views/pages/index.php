@@ -1,8 +1,12 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?=base_url("css/styles.css")?>" />
 <link rel="stylesheet" type="text/css" href="<?=base_url("css/formupload.css")?>">
+
 <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3" >
       <h2>Register or Log On</h2>
+
+
+
     </div>
     <div class="col-sm-4">
 
@@ -85,11 +89,11 @@
                         <label for="pwd">Password:</label>
                         <input type="password" class="form-control" name ="pwd" id="pwd" placeholder="Enter password" form ="Form2">
                     </li>
-                    <li>
+                    <!--<li>
                         <div class="checkbox">
                             <label>Remember Me<input type="checkbox" name="checkbox" value="value"></label>
                         </div>
-                    </li>
+                    </li> -->
                     <li>
                         <button type="submit" class="btn btn-default"  form="Form2"> Submit</button>
                     </li>
@@ -99,7 +103,7 @@
     </div>
 </div>
     <script type="text/javascript" src="<?=base_url("js/filedrag.js")?>" ></script>
-
+    <script type="text/javascript" src="<?=base_url("js/getlatlong.js")?>" ></script>
 <script>//jquery
     $('#fileselect').change(function() {
         var filename = $(this).val();

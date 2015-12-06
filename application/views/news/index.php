@@ -28,8 +28,8 @@
 
     <div class="col-sm-4">
             <h2><?php echo "Search News"; ?></h2>
-        <script>
-            // This is the jQuery Ajax call
+       <!-- <script>
+            // This is the jQuery Ajax call it seems to work from the script in the js directory
             function doSearch()
             {
                 $.ajax({
@@ -49,7 +49,7 @@
                         $("#searchresults").html(result);
                     }});
             }
-        </script>
+        </script>  -->
 
         <!-- Search box -->
         <p>
@@ -73,4 +73,4 @@
 
 </div>
 <script type="text/javascript" src="<?=base_url("js/formSaver.js")?>" ></script>
-//<script type="text/javascript" src="<?=base_url("js/doSearch.js")?>" ></script>
+<script type="text/javascript" src="<?=base_url("js/doSearch.js")?>" ></script>
