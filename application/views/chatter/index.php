@@ -25,7 +25,7 @@
     <section id="messages" aria-live="polite" ></section>
     </div>
     <div class ="col-sm-3" >
-        <h2><p id="demo" >Find SmurfFriends.</p></h2>
+        <h2><p id="demo" >Find Friends.</p></h2>
 
         <button onclick="getLocation()">Try It</button>
 

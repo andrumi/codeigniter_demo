@@ -23,14 +23,14 @@
         <div id="results"></div>
 
     </div>
-    <div class="col-sm-4">
-        <h3>Column 2</h3>
+    <!--<div class="col-sm-4">
+        <h3></h3>
 
     </div>
     <div class="col-sm-4">
         <h3>Column 3</h3>
 
-    </div>
+    </div> -->
 </div>
 
 
