@@ -24,4 +24,6 @@ class Chatter extends CI_Controller
         $this->load->view('push-event');
 
     }
+
+
 }
