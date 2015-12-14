@@ -16,24 +16,15 @@ class Ebay  extends CI_Controller {
 //    }
 
 
- /*   public function index()
+    public function index()
     {
 
         $data['title'] = 'Ebay Search Results';
 
         $this->load->view('templates/header', $data);
-        //$this->load->view('ebay/index', $data); 
-        $this->load->view('ebay/index', $data);
-        $this->load->view('templates/footer');
-
-    }   */
-    public function view($page = 'index')      {
-
-        $data['title'] = 'Ebay Search Results';
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('ebay/'.$page, $data);
+        $this->load->view('ebay/ebaysearch', $data);
         $this->load->view('templates/footer');
 
     }
+
 }
