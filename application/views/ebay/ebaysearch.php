@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="<?=base_url("css/css/flora.all.css")?>" type="text/css" media="screen" title="Flora (Default)">
 
 <!--<form action="<?=base_url("js/advancedsearch.php")?>" method="post"> -->
-<form action="ebaysearch.php" method="post"> 
+<form action="<?=site_url("ebay/")?>" method="post">
 <table cellpadding="2" border="0">
   <tr>
     <th>Query</th>
@@ -32,15 +32,6 @@
   </tr>
   <tr>
     <td><input type="text" name="Query" value="Smurf"></td>
-    <!--<td>
-    <select name="GlobalID">
-      <option value="EBAY-AU">Australia - EBAY-AU - AUD</option>
-      <option value="EBAY-ENCA">Canada (English) - EBAY-ENCA - CAD</option>
-      <option value="EBAY-DE">Germany - EBAY-DE - EUR</option>
-      <option value="EBAY-GB">United Kingdom - EBAY-GB - GBP</option>
-      <option value="EBAY-US">United States - EBAY-US - USD</option>
-      </select>   
-    </td> -->
     <td><input type="text" name="MaxPrice" value="25"></td>
     <td>
     <select name="ItemsPerRange">
