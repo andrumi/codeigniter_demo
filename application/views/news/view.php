@@ -10,8 +10,8 @@
             <img src="<?=base_url("images/".$news_item['image'])?>" width = "460" height = "345">
         </div>
         <div class="col-sm-4">
-            <h3>Column 3</h3>
-            <p>words go here</p>
+<!--            <h3>Column 3</h3>-->
+<!--            <p>words go here</p>-->
         </div>
 
 </div>
