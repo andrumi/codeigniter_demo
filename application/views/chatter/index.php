@@ -5,7 +5,7 @@
 <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="<?=base_url("js/websockets.js")?>" ></script>
-
+<script type="text/javascript" src="<?=base_url("js/getTown.js")?>" ></script>
 
 <div class="jumbotron">
     <h1><?php echo $title; ?></h1>
@@ -16,9 +16,10 @@
     <div class="col-sm-5">
       <section id="new_message">
         <form>
-            <input type="text" id="name" name ="name" placeholder="Your name">
+            <input type="text" id="name" name ="name" placeholder="<?php echo $user; ?>" value = '<?php echo $user; ?>'><!--placeholder="Your name"-->
             <input type="text" id="yourmessage" name = "yourmessage" placeholder="Comment">
-            <input type="button" id="postit" value="Post">
+            <input type="hidden" id ="locality" name = "locality" >
+            <input type="button" id="postit" value="Post" >
             <span id="debugmessage"></span>
         </form>
     </section>
