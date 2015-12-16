@@ -19,7 +19,8 @@ function showPosition2(position) {
 function getData(){
     var arr=[];
     $.ajax({
-        url: "http://mi-linux.wlv.ac.uk/~1228264/codeigniter/js/getUsersLatLong.php",
+        url: "<?=base_url(\"js/getUsersLatLong.php\")?>",
+        //url: "http://mi-linux.wlv.ac.uk/~1228264/codeigniter/js/getUsersLatLong.php",
         data:arr,
         dataType: "json",
         success:function(response){
