@@ -55,6 +55,7 @@ function SendNewMessage()
     // Read name and message from form
     var name = $('#name').val();
     var message = $('#yourmessage').val();
+    var locality = $('#locality').val();
     var connecting = $('#postit').prop('disabled');
 
     // Validate input
@@ -74,9 +75,10 @@ function SendNewMessage()
         // Send message to server
         var request = $.ajax({
             // ### Your URL Here StudentNo/YourFilesFolder/push-event.php ###
-            url: "http://mi-linux.wlv.ac.uk/~1228264/codeigniter/js/push-event.php",
+            url: "<?=base_url(\"../js/push-event.php\")?>",
+            //url: "http://mi-linux.wlv.ac.uk/~1228264/codeigniter/js/push-event.php",
             type: "POST",
-            data: ({name : name, message : message, key : $key, secret : $secret, app_id : $app_id})
+            data: ({name : name, message : message,locality: locality, key : $key, secret : $secret, app_id : $app_id})
         });
         // Debug
         request.done(function( msg ) {
