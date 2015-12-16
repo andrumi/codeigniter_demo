@@ -75,8 +75,8 @@ function SendNewMessage()
         // Send message to server
         var request = $.ajax({
             // ### Your URL Here StudentNo/YourFilesFolder/push-event.php ###
-            url: "<?=base_url(\"../js/push-event.php\")?>",
-            //url: "http://mi-linux.wlv.ac.uk/~1228264/codeigniter/js/push-event.php",
+           // url: "<?=base_url(\"../js/push-event.php\")?>",
+            url: "http://mi-linux.wlv.ac.uk/~1228264/codeigniter/js/push-event.php",
             type: "POST",
             data: ({name : name, message : message,locality: locality, key : $key, secret : $secret, app_id : $app_id})
         });

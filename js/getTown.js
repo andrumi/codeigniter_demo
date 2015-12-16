@@ -27,7 +27,7 @@ geocoder.geocode({'latLng': latlng}, function(results, status) {
     if (results[1]) {
      //formatted address
      locality=  results[0].address_components[2]
-     alert(""+locality.short_name)//.formatted_address
+     //alert(""+locality.short_name)//.formatted_address
     //find country name
         street=results[0].address_components[1]
         town=results[0].address_components[3]
