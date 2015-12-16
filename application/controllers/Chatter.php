@@ -14,6 +14,7 @@ class Chatter extends CI_Controller
     public function index()
     {
         $data['title'] = 'Chatter';
+        $data['user']= 'sessionUserGoesHere';
         $this->load->view('templates/header',$data);
         $this->load->view('chatter/index');
         $this->load->view('templates/footer');
