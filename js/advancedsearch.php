@@ -33,7 +33,7 @@ if(isset($_POST['Query']))
     $apicall = "$endpoint?OPERATION-NAME=findItemsAdvanced"
          . "&SERVICE-VERSION=1.0.0"
          . "&GLOBAL-ID=$site"
-         . "&SECURITY-APPNAME=AndrewGi-62a4-4064-89c3-a081c9d72a82" //replace with your app id
+         . "&SECURITY-APPNAME=Andr*************-89c3-a081c9d72a82" //replace with your app id
          . "&keywords=$safeQuery"
          . "&paginationInput.entriesPerPage=$itemsPerRange"
          . "&sortOrder=BestMatch"
